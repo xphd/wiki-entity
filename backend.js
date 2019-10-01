@@ -37,11 +37,12 @@ const search = require("./search.js")
 
 start()
 
-async function start(){
+function start(){
     console.log("begin search")
-    await search(col_names).then(()=>{
+    search(col_names).then(()=>{
         console.log("end")
     })
+    
     console.log("end search")
 }
 
