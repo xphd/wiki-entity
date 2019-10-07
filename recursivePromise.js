@@ -6,17 +6,17 @@ function f1() {
       return f2(item);
     });
   });
-  let promise = new Promise((fulfill, reject) => {
-    chain
-      .then(() => {
-        fulfill();
-      })
-      .catch(err => {
-        // console.log("ERR", err);
-        reject(err);
-      });
-  });
-  return promise;
+  // let promise = new Promise((fulfill, reject) => {
+  //   chain
+  //     .then(() => {
+  //       fulfill();
+  //     })
+  //     .catch(err => {
+  //       // console.log("ERR", err);
+  //       reject(err);
+  //     });
+  // });
+  // return chain;
 }
 
 function f2(item) {
@@ -74,6 +74,7 @@ function singleSearch(item, fullfill) {
 
 
 
-f1().then(()=>{
-    console.log("end")
-})
+f1()
+// .then(()=>{
+//     console.log("end")
+// })

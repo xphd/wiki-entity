@@ -35,15 +35,32 @@ let found_entities = []
 // search
 const search = require("./search.js")
 
-start()
+async function f1(){
+    console.log("begin")
+    await start()
+    console.log("end")
+}
 
+f1() 
 function start(){
     console.log("begin search")
-    search(col_names).then(()=>{
-        console.log("end")
+    let chain = Promise.resolve()
+    col_names.forEach(name=>{
+        chain = chain.then(()=>{
+            return search(name)
+        })
     })
-    
-    console.log("end search")
+    // let promise = new Promise((fulfill, reject) => {
+    //     chain
+    //       .then(() => {
+    //         fulfill();
+    //       })
+    //       .catch(err => {
+    //         // console.log("ERR", err);
+    //         reject(err);
+    //       });
+    //   });
+    return chain  
 }
 
 

@@ -19,7 +19,7 @@
     "wikidata-search": "^1.0.3"
   },
   "devDependencies": {
-    "babel-node": "0.0.1-security",
+    "babel-node": "^0.0.1-security",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0"
   }
